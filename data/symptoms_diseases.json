@@ -1,0 +1,63 @@
+# Dataset des symptômes et maladies pour entraînement
+[
+    {
+        "symptom": "mal à la tête",
+        "disease": "Migraine",
+        "severity": "modéré",
+        "frequency": "souvent"
+    },
+    {
+        "symptom": "fièvre",
+        "disease": "Grippe",
+        "severity": "élevé",
+        "frequency": "souvent"
+    },
+    {
+        "symptom": "toux",
+        "disease": "Grippe",
+        "severity": "modéré",
+        "frequency": "souvent"
+    },
+    {
+        "symptom": "nausée",
+        "disease": "Gastro-entérite",
+        "severity": "modéré",
+        "frequency": "parfois"
+    },
+    {
+        "symptom": "fatigue",
+        "disease": "Rhume",
+        "severity": "faible",
+        "frequency": "souvent"
+    },
+    {
+        "symptom": "congestion nasale",
+        "disease": "Rhume",
+        "severity": "faible",
+        "frequency": "souvent"
+    },
+    {
+        "symptom": "douleur musculaire",
+        "disease": "Grippe",
+        "severity": "modéré",
+        "frequency": "souvent"
+    },
+    {
+        "symptom": "allergie",
+        "disease": "Allergie",
+        "severity": "faible",
+        "frequency": "parfois"
+    },
+    {
+        "symptom": "vertiges",
+        "disease": "Infection de l'oreille interne",
+        "severity": "modéré",
+        "frequency": "parfois"
+    },
+    {
+        "symptom": "mal de gorge",
+        "disease": "Angine",
+        "severity": "modéré",
+        "frequency": "souvent"
+    }
+]

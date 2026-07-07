@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Diagnostic Médical</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🏥 Assistant Diagnostic Médical</h1>
+            <p class="subtitle">Décrivez vos symptômes pour une évaluation préliminaire</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Chatbot Section -->
+            <section class="chatbot-section">
+                <!-- Messages Container -->
+                <div id="messagesContainer" class="messages-container">
+                    <div class="message system-message">
+                        <p>👋 Bienvenue! Je suis votre assistant diagnostic médical. Décrivez vos symptômes en détail et je vous fournirai une évaluation préliminaire.</p>
+                        <p style="font-size: 0.9em; margin-top: 10px; opacity: 0.8;">⚠️ Note: Ceci n'est qu'une évaluation préliminaire. Consultez toujours un professionnel de santé pour un diagnostic complet.</p>
+                    </div>
+                </div>
+
+                <!-- Input Section -->
+                <div class="input-section">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="symptomInput" 
+                            class="symptom-input" 
+                            placeholder="Décrivez vos symptômes (ex: j'ai mal à la tête, fièvre, toux...)"
+                            autocomplete="off"
+                        >
+                        <button id="sendBtn" class="send-button">
+                            📤 Envoyer
+                        </button>
+                    </div>
+                    <div class="suggestions">
+                        <small>Suggestions: mal à la tête • fièvre • toux • nausée • fatigue</small>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <aside class="results-section" id="resultsSection" style="display: none;">
+                <h2>📋 Résultats du Diagnostic</h2>
+                
+                <!-- Primary Diagnosis -->
+                <div class="diagnosis-card primary">
+                    <h3>Diagnostic Principal</h3>
+                    <p id="primaryDisease" class="disease-name">--</p>
+                    <div class="confidence-bar">
+                        <div id="confidenceBar" class="confidence-fill"></div>
+                    </div>
+                    <p id="confidenceScore" class="confidence-text">Confiance: --</p>
+                </div>
+
+                <!-- Risk Level -->
+                <div class="diagnosis-card risk">
+                    <h3>Niveau de Risque</h3>
+                    <p id="riskLevel" class="risk-badge">--</p>
+                    <p id="riskMessage" class="risk-message">--</p>
+                </div>
+
+                <!-- Alternative Diagnoses -->
+                <div class="diagnosis-card alternatives">
+                    <h3>Diagnostics Alternatifs</h3>
+                    <ul id="alternativeDiseases" class="diseases-list">
+                        <li>Chargement...</li>
+                    </ul>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="diagnosis-card recommendations">
+                    <h3>✅ Recommandations</h3>
+                    <ul id="recommendationsList" class="recommendations-list">
+                        <li>Chargement...</li>
+                    </ul>
+                </div>
+
+                <!-- Symptoms Extracted -->
+                <div class="diagnosis-card symptoms">
+                    <h3>🔍 Symptômes Identifiés</h3>
+                    <div id="symptomsTags" class="symptoms-tags">
+                        <!-- Tags générés dynamiquement -->
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>💡 Cet assistant est fourni à titre informatif uniquement. Pour toute urgence médicale, appelez les services d'urgence (SAMU).</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">© 2025 - Projet Tutoré Data Analytics | Université Virtuelle du Burkina Faso</p>
+        </footer>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+        <p>Analyse en cours...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/api.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
